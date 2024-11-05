@@ -13,7 +13,7 @@ const Footer = () => {
   const tlink = "https://www.twitter.com/";
 
   return (
-    <footer className="bg-white text-gray-800 flex flex-col items-center py-8 w-full">
+    <footer className="bg-white text-gray-800 flex flex-col items-center pt-8 w-full h-full">
       <div className="flex flex-wrap justify-between max-w-6xl mx-auto gap-8">
         {/* Logo and Newsletter */}
         <div className="flex-1 min-w-[200px]">
@@ -29,47 +29,47 @@ const Footer = () => {
               placeholder="Enter Your Email"
               className="p-2 border border-gray-300 rounded text-sm text-gray-800"
             />
-            <button className="bg-blue-600 text-white font-bold rounded px-4 py-2 hover:bg-blue-500 transition">
+            <button className="bg-indigo-950 text-white font-bold rounded px-4 py-2 hover:bg-blue-500 transition">
               Let's Do It
             </button>
           </div>
         </div>
 
         {/* Quick Links */}
-        <div className="flex-1 min-w-[150px]">
-          <h4 className="text-lg text-blue-500 mb-4">Quick Links</h4>
+        <div className="flex-1 min-w-[150px] ml-20">
+          <h4 className="text-lg text-[#1b1c67] mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
-              <a href="/" className="hover:text-blue-500">
+              <Link to="/home" className="hover:text-blue-500">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-blue-500">
+              <Link to="/about" className="hover:text-blue-500">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/services" className="hover:text-blue-500">
+              <Link to="/services" className="hover:text-blue-500">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/government" className="hover:text-blue-500">
+              <Link to="/government" className="hover:text-blue-500">
                 Government
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/case-studies" className="hover:text-blue-500">
+              <Link to="/case-studies" className="hover:text-blue-500">
                 Case Studies
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Support Links */}
-        <div className="flex-1 min-w-[150px]">
-          <h4 className="text-lg text-blue-500 mb-4">Support</h4>
+        <div className="flex-1 min-w-[150px] ml-20">
+          <h4 className="text-lg text-[#1b1c67] mb-4">Support</h4>
           <ul className="space-y-2">
             <li>
               <Link to="/terms" className="hover:text-blue-500">
@@ -95,8 +95,8 @@ const Footer = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="flex-1 min-w-[200px]">
-          <h4 className="text-lg text-blue-500 mb-4">Get in Touch</h4>
+        <div className="flex-1 min-w-[200px] ml-20">
+          <h4 className="text-lg text-[#1b1c67] mb-4">Get in Touch</h4>
           <div className="space-y-3">
             <div className="flex items-center">
               <img src={location} alt="location" className="w-6 h-6 mr-3" />
@@ -112,35 +112,35 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-3 mt-4">
-            <a
-              href={flink}
+            <Link
+              to={flink}
               className="text-blue-800 bg-white p-2 rounded-full hover:bg-blue-500 hover:text-white transition"
             >
               <FaFacebook />
-            </a>
-            <a
-              href={ylink}
+            </Link>
+            <Link
+              to={ylink}
               className="text-blue-800 bg-white p-2 rounded-full hover:bg-blue-500 hover:text-white transition"
             >
               <FaYoutube />
-            </a>
-            <a
-              href={tlink}
+            </Link>
+            <Link
+              to={tlink}
               className="text-blue-800 bg-white p-2 rounded-full hover:bg-blue-500 hover:text-white transition"
             >
               <FaTwitter />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="w-full bg-[#1b1c67] text-white text-center py-4 mt-8">
-        <p>
+      <div className="w-full h-full bg-[#1b1c67] text-white text-center mt-8 ml-20">
+        <p className="size-45">
           © All Rights Reserved 2024 Advanced 360 Solutions. Powered by
-          <a href={link} className="text-blue-400 hover:underline ml-1">
+          <Link to={link} className="text-white hover:underline ml-1">
             Apex Web Studios
-          </a>
+          </Link>
         </p>
       </div>
     </footer>

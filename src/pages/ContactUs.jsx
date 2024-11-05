@@ -1,9 +1,31 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaPaperPlane,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarker,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log("🚀 ~ Submit button triggerred");
+  };
+
+  const link = "https://apexwebstudios.net/";
+  const fLink = "https://www.facebook.com/";
+  const tLink = "https://www.twitter.com/";
+  const iLink = "https://www.instagram.com/";
+
   return (
-    <div className="flex flex-wrap md:flex-nowrap bg-gradient-to-br from-blue-500 to-blue-900 rounded-lg p-8 text-white max-w-6xl mx-auto gap-8">
+    <div
+      id="contact-section"
+      className="flex flex-wrap md:flex-nowrap bg-gradient-to-br from-[#3539eb] to-[#1b1c67] rounded-lg p-8 text-white max-w-6xl mx-auto gap-8"
+    >
       {/* Left Section - Contact Information */}
       <div className="flex-1 p-4 flex flex-col gap-4">
         <p className="italic text-gray-300">
@@ -19,68 +41,69 @@ const ContactUs = () => {
         </p>
         <div className="space-y-3">
           <div className="flex items-center text-lg">
-            <i className="fas fa-envelope mr-3 text-blue-300"></i>
-            <p>info@a360s.com</p>
+            <FaEnvelope size={20} className={`mr-3 text-white`} />
+            <p> info@a360s.com</p>
+          </div>
+          <div className="flex items-center text-lg rounded border-black">
+            <FaPhone className="mr-3 text-white" />
+            <p className="decoration-solid">+1 (703) 644-8000</p>
           </div>
           <div className="flex items-center text-lg">
-            <i className="fas fa-phone mr-3 text-blue-300"></i>
-            <p>+1 (703) 644-8000</p>
-          </div>
-          <div className="flex items-center text-lg">
-            <i className="fas fa-map-marker-alt mr-3 text-blue-300"></i>
+            <FaMapMarker className="mr-3 text-white" />
             <p>46164 Westlake Dr. #650422 Sterling, VA 20165-9998</p>
           </div>
         </div>
         <div className="flex gap-4 mt-4">
-          <a
-            href="#"
+          <Link
+            to={fLink}
             className="text-white bg-blue-800 p-3 rounded-full hover:bg-blue-600 transition"
           >
             <FaFacebook />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={iLink}
             className="text-white bg-blue-800 p-3 rounded-full hover:bg-blue-600 transition"
           >
             <FaInstagram />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to={tLink}
             className="text-white bg-blue-800 p-3 rounded-full hover:bg-blue-600 transition"
           >
             <FaTwitter />
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Right Section - Contact Form */}
       <div className="flex-1 bg-white text-gray-700 rounded-lg p-8 flex flex-col">
-        <h3 className="text-xl font-semibold text-blue-800 mb-4">Contact Us</h3>
+        <h3 className="text-xl font-bold text-[#1b1c67] mb-4">Contact Us</h3>
         <form className="flex flex-col gap-4">
           <input
             type="text"
             placeholder="Your Name"
-            className="p-3 border border-gray-300 rounded outline-none text-base text-gray-700 placeholder-gray-400"
+            className="p-3 border border-white rounded outline-none text-base text-gray-700 placeholder-gray-400"
           />
           <input
             type="tel"
             placeholder="Phone No"
-            className="p-3 border border-gray-300 rounded outline-none text-base text-gray-700 placeholder-gray-400"
+            className="p-3 border border-white rounded outline-none text-base text-gray-700 placeholder-gray-400"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="p-3 border border-gray-300 rounded outline-none text-base text-gray-700 placeholder-gray-400"
+            className="p-3 border border-white rounded outline-none text-base text-gray-700 placeholder-gray-400"
           />
           <textarea
             placeholder="Your Message"
-            className="p-3 border border-gray-300 rounded outline-none text-base text-gray-700 placeholder-gray-400 resize-none h-32"
+            className="p-3 border border-white rounded outline-none text-base text-gray-700 placeholder-gray-400 resize-none h-32"
           ></textarea>
           <button
+            onClick={handleClick}
             type="submit"
             className="px-4 py-3 bg-blue-800 text-white font-bold rounded hover:bg-blue-600 transition flex items-center justify-center gap-2"
           >
-            <i className="fas fa-paper-plane"></i> Send Message
+            <FaPaperPlane /> Send Message
           </button>
         </form>
       </div>

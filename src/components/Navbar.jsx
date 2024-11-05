@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Contact Us Button */}
       <button
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition"
+        className="px-4 py-2 bg-[#1b1c67] text-white rounded hover:bg-blue-500 transition"
         onClick={handleClick}
       >
         Contact Us
