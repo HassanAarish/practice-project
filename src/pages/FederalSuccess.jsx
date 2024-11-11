@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../assets/1.png";
 
-const Section1 = () => {
+const CommercialandFederalSuccess = () => {
   const handleClick = () => {
     console.log("Clicked");
   };
@@ -40,4 +40,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default CommercialandFederalSuccess;

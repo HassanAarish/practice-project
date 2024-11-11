@@ -1,12 +1,5 @@
 import React from "react";
-
-const MetricCard = ({ icon, value, description }) => (
-  <div className="flex flex-col items-center text-white text-center">
-    <img src={icon} alt="" className="w-16 h-16 mb-4" />
-    <h3 className="text-3xl font-bold">{value}</h3>
-    <p className="text-base font-light">{description}</p>
-  </div>
-);
+import MetricCard from "../components/MetricCard";
 
 const SuccessSection = () => {
   const metricsData = [
@@ -33,23 +26,25 @@ const SuccessSection = () => {
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center px-52 py-8 bg-[linear-gradient(0deg,#1B1C67_0%,#0096E8_188.17%)] rounded-[51px] max-md:px-5">
-      <div className="flex flex-col w-full max-w-[1205px] max-md:max-w-full">
-        <h2 className="text-2xl font-bold leading-none text-center text-white max-md:max-w-full max-md:text-4xl">
-          Our Success By The Numbers
-        </h2>
-        <div className="flex gap-10 items-start mt-10 w-full max-md:max-w-full justify-center">
-          {metricsData.map((metric, index) => (
-            <MetricCard
-              key={index}
-              icon={metric.icon}
-              value={metric.value}
-              description={metric.description}
-            />
-          ))}
+    <div className="mx-auto max-w-screen-xl">
+      <div className="flex flex-col justify-center items-center rounded-[2rem] bg-gradient-to-r from-[#1B1C67] to-[#00527e]">
+        <div className="justify-center p-[0.75rem]">
+          <h2 className="text-3xl font-bold text-center text-white mb-8">
+            Our Success By The Numbers
+          </h2>
+          <div className="flex flex-wrap gap-10 items-start justify-center text-wrap">
+            {metricsData.map((metric, index) => (
+              <MetricCard
+                key={index}
+                icon={metric.icon}
+                value={metric.value}
+                description={metric.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Section1 from "../components/Section1";
+import CommercialandFederalSuccess from "./FederalSuccess";
 import ContactUs from "./ContactUs";
-import SuccessSection from "../components/SuccessSection";
+import SuccessSection from "./SuccessSection";
 import AboutOurCompany from "./AboutOurCompany";
 import Services from "./Services";
 import ScheduleSection from "./ScheduleSection";
@@ -9,7 +9,7 @@ import TrustedPartners from "./TrustedPartners";
 
 const Home = () => (
   <>
-    <Section1 />
+    <CommercialandFederalSuccess />
     <SuccessSection />
     <AboutOurCompany />
     <Services />
