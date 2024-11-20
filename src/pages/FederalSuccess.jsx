@@ -33,7 +33,7 @@ const CommercialandFederalSuccess = () => {
         </button>
       </div>
       {/* Right side of the section Image */}
-      <div className="max-w-full max-h-full">
+      <div className="">
         <img src={image} alt="Section1 image" />
       </div>
     </div>
