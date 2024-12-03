@@ -135,7 +135,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="w-full h-full bg-[#1b1c67] text-white text-center mt-8 ml-20">
+      <div className="w-full h-full bg-[#1b1c67] text-white text-center mt-8">
         <p className="size-45">
           © All Rights Reserved 2024 Advanced 360 Solutions. Powered by
           <Link to={link} className="text-white hover:underline ml-1">
