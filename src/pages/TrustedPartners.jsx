@@ -1,4 +1,8 @@
 import React from "react";
+import image1 from "../assets/Trusted1.png";
+import image2 from "../assets/Trusted2.png";
+import image3 from "../assets/Trusted3.png";
+import image4 from "../assets/Trusted4.png";
 
 const TrustedPartners = () => {
   return (
@@ -10,28 +14,20 @@ const TrustedPartners = () => {
         {/* Partner Logos */}
         <div className="bg-white p-4 rounded-lg shadow-md">
           <img
-            src="/path-to-transformation-accelerator-logo.png"
+            src={image1}
             alt="Transformation Accelerator"
             className="mx-auto h-16"
           />
         </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <img
-            src="/path-to-unisys-logo.png"
-            alt="Unisys"
-            className="mx-auto h-16"
-          />
+          <img src={image2} alt="Unisys" className="mx-auto h-16" />
+        </div>
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <img src={image3} alt="Bofinet" className="mx-auto h-16" />
         </div>
         <div className="bg-white p-4 rounded-lg shadow-md">
           <img
-            src="/path-to-bofinet-logo.png"
-            alt="Bofinet"
-            className="mx-auto h-16"
-          />
-        </div>
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <img
-            src="/path-to-pda-logo.png"
+            src={image4}
             alt="Private Directors Association"
             className="mx-auto h-16"
           />
