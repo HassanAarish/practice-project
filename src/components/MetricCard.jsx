@@ -1,13 +1,20 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MetricCard = ({ icon, value, description }) => {
   return (
-    <div className="flex flex-col items-center text-white text-center text-wrap max-w-[12.5rem]">
-      <img src={icon} alt="" className="w-16 h-16 mb-4" />
-      <h3 className="text-3xl font-bold">{value}</h3>
-      <p className="text-base font-light mt-2">{description}</p>
+    <div className="w-64 min-h-[16rem] bg-gradient-to-b from-blue-900 to-blue-800 text-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-between">
+      <img src={icon} alt="Metric Icon" className="w-12 h-12 mb-4" />
+      <h3 className="text-4xl font-bold text-center">{value}</h3>
+      <p className="text-center font-normal mt-2 text-sm">{description}</p>
     </div>
   );
+};
+
+MetricCard.propTypes = {
+  icon: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default MetricCard;

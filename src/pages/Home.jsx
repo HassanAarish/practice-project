@@ -2,20 +2,20 @@ import React from "react";
 import CommercialandFederalSuccess from "./FederalSuccess";
 import ContactUs from "./ContactUs";
 import SuccessSection from "./SuccessSection";
-import AboutOurCompany from "./AboutOurCompany";
+import CustomerSolution from "./CustomerSolution";
 import Services from "./Services";
-import ScheduleSection from "./ScheduleSection";
+import BusinessObstacle from "./BusinessObstacle";
 import TrustedPartners from "./TrustedPartners";
 
 const Home = () => (
   <>
     <CommercialandFederalSuccess />
     <SuccessSection />
-    <AboutOurCompany />
     <Services />
-    <ScheduleSection />
-    <TrustedPartners />
+    <CustomerSolution />
+    <BusinessObstacle />
     <ContactUs />
+    <TrustedPartners />
   </>
 );
 

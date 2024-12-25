@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import image from "../assets/NavbarLogo.png";
 
 const Navbar = () => {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  useEffect(() => {
+    const headerSection = document.getElementById("header-section");
+
+    if (headerSection) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsHeaderVisible(entry.isIntersecting);
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(headerSection);
+
+      return () => observer.disconnect();
+    }
+  }, []);
+
   const handleClick = () => {
     const contactSection = document?.getElementById("contact-section");
     contactSection
@@ -21,14 +40,21 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="list-none flex gap-6">
           <li>
-            <Link to="/" className="text-white font-medium hover:text-blue-500">
+            <Link
+              to="/"
+              className={`font-medium hover:text-blue-500 ${
+                isHeaderVisible ? "text-white" : "text-black"
+              }`}
+            >
               Home
             </Link>
           </li>
           <li>
             <Link
               to="/services"
-              className="text-white font-medium hover:text-blue-500"
+              className={`font-medium hover:text-blue-500 ${
+                isHeaderVisible ? "text-white" : "text-black"
+              }`}
             >
               Services
             </Link>
@@ -36,7 +62,9 @@ const Navbar = () => {
           <li>
             <Link
               to="/government"
-              className="text-white font-medium hover:text-blue-500"
+              className={`font-medium hover:text-blue-500 ${
+                isHeaderVisible ? "text-white" : "text-black"
+              }`}
             >
               Government
             </Link>
@@ -44,7 +72,9 @@ const Navbar = () => {
           <li>
             <Link
               to="/case-studies"
-              className="text-white font-medium hover:text-blue-500"
+              className={`font-medium hover:text-blue-500 ${
+                isHeaderVisible ? "text-white" : "text-black"
+              }`}
             >
               Case Studies
             </Link>
@@ -52,7 +82,9 @@ const Navbar = () => {
           <li>
             <Link
               to="/about"
-              className="text-white font-medium hover:text-blue-500"
+              className={`font-medium hover:text-blue-500 ${
+                isHeaderVisible ? "text-white" : "text-black"
+              }`}
             >
               About A360s
             </Link>
